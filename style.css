@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Minecraft";
+  src: url(./fonts/Minecraft.woff2) format("woff2");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.buttons {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-60px);
+}
+
+.btn {
+  font-size: 24px;
+  border-radius: 10px;
+  padding: 0.5em 1em;
+  background-color: rgb(35, 35, 155);
+  color: whitesmoke;
+  font-family: "Minecraft", sans-serif;
+}
+
+.cats {
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+}
+.cat {
+  width: min-content;
+  position: absolute;
+  animation: bounce-fall 0.6s ease-in, bounce-fall 0.6s ease-in;
+  animation-delay: 0, 3s;
+  top: calc(100% - 45px);
+}
+
+@keyframes bounce-fall {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: calc(100% - 45px);
+  }
+}
